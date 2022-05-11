@@ -1,0 +1,14 @@
+import requests
+
+url = "https://api-football-v1.p.rapidapi.com/v3/players"
+
+querystring = {"id":"276","season":"2020"}
+
+headers = {
+	"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+	"X-RapidAPI-Key": "a4942b0c78msh5ea4103452492b4p198b55jsn018c16c7c6dd"
+}
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
